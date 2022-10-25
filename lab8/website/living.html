@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Amara</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="color/default.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <header>
+            {{template "header" .}}
+        </header>
+
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="inner-heading">
+                            <h2>Проживання</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <section id="projects">
+                            <ul id="thumbs" class="grid cs-style-4 portfolio">
+                                {{range .Numbers}}
+                                <li class="item-thumbs span6 web" data-id="id-0" data-type="web">
+                                    <div class="item">
+                                        <figure>
+                                            <div><img src="img/amara_living_photos{{ . }}.jpg" alt="" /></div>
+                                            <figcaption>
+                                                <div>
+                                                    <span><a href="/residency/{{ . }}"><i class="icon-eye-open icon-circled icon-bglight icon-3x"></i></a></span>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </li>
+                                {{end}}
+                            </ul>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <footer>
+        {{template "footer" .}}
+    </footer>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/modernizr.custom.js"></script>
+
+
+</body>
+
+</html>
